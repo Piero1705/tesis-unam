@@ -1,0 +1,278 @@
+:root {
+    --blanco: #ffffff;
+    --fondo-oscuro: #2d2d2d;
+    --azul: #657fbd;
+    --azul-oscuro: #536da9;
+    --turquesa: #4bc7d3;
+    --turquesa-oscuro: #35adb8;
+    --negro: #111111;
+    --gris: #6c6c6c;
+    --rojo: #b3261e;
+    --rojo-fondo: #ffdcd8;
+    --verde: #176b3a;
+    --verde-fondo: #dff6e8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fondo-oscuro);
+    color: var(--blanco);
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+.pagina-login {
+    width: 100%;
+    min-height: 100vh;
+    padding: 38px 42px;
+    display: grid;
+    grid-template-columns: 280px minmax(560px, 750px) 280px;
+    justify-content: space-between;
+    align-items: start;
+    gap: 35px;
+    border-radius: 34px;
+    background-color: var(--fondo-oscuro);
+}
+
+.contenedor-logo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo-unam {
+    width: 280px;
+    max-width: 100%;
+    padding: 12px;
+    background-color: var(--blanco);
+    border-radius: 22px;
+    object-fit: contain;
+}
+
+.zona-central {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panel-login {
+    width: 100%;
+    padding: 32px 70px 30px;
+    background-color: var(--azul);
+    border-radius: 36px;
+}
+
+.titulo-login {
+    margin: 0 auto 28px;
+    max-width: 680px;
+    color: var(--blanco);
+    font-size: clamp(30px, 2.5vw, 43px);
+    font-weight: 400;
+    line-height: 1.18;
+    text-align: center;
+}
+
+.grupo-campo {
+    margin-bottom: 24px;
+}
+
+.campo {
+    width: 100%;
+    height: 64px;
+    padding: 0 24px;
+    border: 3px solid transparent;
+    border-radius: 18px;
+    background-color: var(--blanco);
+    color: var(--negro);
+    font-size: 20px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo::placeholder {
+    color: var(--gris);
+}
+
+.campo:focus {
+    border-color: var(--turquesa);
+    box-shadow: 0 0 0 4px rgba(75, 199, 211, 0.25);
+}
+
+.bienvenida {
+    margin-top: 34px;
+    color: var(--blanco);
+    font-size: clamp(28px, 2.1vw, 40px);
+    font-weight: 400;
+    text-align: center;
+}
+
+.mensaje {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.mensaje.error {
+    color: var(--rojo);
+    background-color: var(--rojo-fondo);
+}
+
+.mensaje.correcto {
+    color: var(--verde);
+    background-color: var(--verde-fondo);
+}
+
+.contenedor-ilustracion {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.ilustracion-asesor {
+    width: 400px;
+    max-width: 78%;
+    height: 285px;
+    object-fit: contain;
+}
+
+.zona-botones {
+    min-height: 540px;
+    padding-top: 310px;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+
+.boton {
+    width: 100%;
+    min-height: 76px;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 18px;
+    background-color: var(--turquesa);
+    color: var(--negro);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.15;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+    background-color: var(--turquesa-oscuro);
+    transform: translateY(-2px);
+}
+
+.boton:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 1250px) {
+    .pagina-login {
+        grid-template-columns: 220px minmax(500px, 680px) 230px;
+        padding: 28px;
+    }
+
+    .logo-unam {
+        width: 220px;
+    }
+
+    .panel-login {
+        padding: 30px 48px;
+    }
+
+    .zona-botones {
+        padding-top: 290px;
+    }
+}
+
+@media (max-width: 960px) {
+    .pagina-login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 20px 40px;
+    }
+
+    .contenedor-logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo-unam {
+        width: 235px;
+    }
+
+    .zona-central,
+    .zona-botones {
+        width: 100%;
+        max-width: 750px;
+    }
+
+    .zona-botones {
+        min-height: auto;
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 620px) {
+    .pagina-login {
+        padding: 18px 14px 30px;
+    }
+
+    .panel-login {
+        padding: 26px 20px;
+        border-radius: 26px;
+    }
+
+    .titulo-login {
+        font-size: 28px;
+    }
+
+    .campo {
+        height: 57px;
+        padding: 0 17px;
+        font-size: 17px;
+    }
+
+    .bienvenida {
+        font-size: 27px;
+    }
+
+    .ilustracion-asesor {
+        max-width: 100%;
+        height: 240px;
+    }
+
+    .zona-botones {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .boton {
+        min-height: 64px;
+        font-size: 19px;
+    }
+}

@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    min-height:100vh;
+    background:#f2f5fb;
+    color:#13213a;
+    font-family:"Inter",sans-serif
+}
+
+.dashboard{
+    min-height:100vh;
+    display:grid;
+    grid-template-columns:235px 1fr
+}
+
+.sidebar{
+    padding:24px 18px;
+    background:#fff;
+    border-right:1px solid #dde4ef
+}
+
+.marca{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding-bottom:24px;
+    border-bottom:1px solid #edf0f5
+}
+
+.marca img{width:48px}
+.marca h1{color:#12345a;font-size:1.65rem}
+.marca p{color:#6f7785;font-size:.78rem}
+
+.menu{
+    display:grid;
+    gap:8px;
+    margin-top:26px
+}
+
+.menu a{
+    padding:14px 13px;
+    border-radius:11px;
+    color:#1d2f4d;
+    font-size:.9rem;
+    font-weight:700;
+    text-decoration:none
+}
+
+.menu a:hover,.menu a.activo{
+    background:#e4efff;
+    color:#1764c0
+}
+
+.contenido{padding:28px}
+
+.encabezado-pagina{margin-bottom:20px}
+.encabezado-pagina h1{margin:4px 0 6px;font-size:2rem}
+.encabezado-pagina p{color:#6c7688}
+
+.subtitulo{
+    color:#1773c8;
+    font-size:.75rem;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase
+}
+
+.mensaje{
+    margin-bottom:18px;
+    padding:14px 16px;
+    border-radius:12px;
+    background:#dff7f4;
+    color:#146d66;
+    font-weight:700
+}
+
+.tramite{
+    margin-bottom:18px;
+    padding:23px;
+    border:1px solid #dfe6ef;
+    border-radius:17px;
+    background:#fff
+}
+
+.titulo-tramite{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    margin-bottom:15px
+}
+
+.estado-documento{
+    padding:6px 10px;
+    border-radius:999px;
+    background:#d8f8f4;
+    color:#14746d;
+    font-size:.75rem;
+    font-weight:800
+}
+
+.archivo-actual{
+    margin-bottom:14px;
+    color:#667087
+}
+
+.archivo-actual a{
+    color:#1d72c5;
+    font-weight:700
+}
+
+.tramite form{
+    display:grid;
+    max-width:450px;
+    gap:12px
+}
+
+.opcion{font-size:.9rem}
+
+input[type="file"],select{
+    min-height:42px;
+    padding:8px;
+    border:1px solid #d7dde7;
+    border-radius:8px;
+    background:#fff
+}
+
+button{
+    width:max-content;
+    min-width:150px;
+    padding:12px 17px;
+    border:none;
+    border-radius:9px;
+    background:#2478d4;
+    color:#fff;
+    font-weight:800;
+    cursor:pointer
+}
+
+button:hover{background:#1765ba}
+
+.envio-final{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding:25px;
+    border-radius:18px;
+    background:#fff;
+    border:2px solid #2478d4;
+    box-shadow:0 12px 28px rgba(36,120,212,.12)
+}
+
+.envio-final h2{
+    margin:5px 0 8px
+}
+
+.envio-final p{
+    color:#667087
+}
+
+.boton-final{
+    min-width:300px;
+    min-height:52px;
+    font-size:.95rem
+}
+
+.boton-final:disabled{
+    background:#97a6ba;
+    cursor:not-allowed
+}
+
+@media(max-width:850px){
+    .dashboard{grid-template-columns:1fr}
+    .envio-final{
+        align-items:flex-start;
+        flex-direction:column
+    }
+}
+
+@media(max-width:520px){
+    .contenido{padding:18px}
+    .titulo-tramite{
+        align-items:flex-start;
+        flex-direction:column
+    }
+    .boton-final{
+        width:100%;
+        min-width:0
+    }
+}

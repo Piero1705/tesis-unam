@@ -1,0 +1,21 @@
+# Credenciales, configuraciones locales y datos sensibles
+.env
+.env.*
+!.env.example
+CUENTAS Y CONTRASEÑAS.txt
+*.sql
+*.sqlite
+*.sqlite3
+
+# Archivos subidos y datos generados (revisar rutas de almacenamiento)
+/uploads/*
+/archivos/*
+/documentos/*
+/tesis/*
+!/uploads/.gitkeep
+
+# IDE / sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

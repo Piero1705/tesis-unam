@@ -1,0 +1,103 @@
+/* Complementos para expedientes y acta */
+
+.formulario-envio-secretaria {
+    margin-top: 18px;
+}
+
+.boton-enviar-secretaria {
+    width: 100%;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 11px;
+    background: #35b9aa;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.boton-enviar-secretaria:disabled {
+    background: #9da9ba;
+    cursor: not-allowed;
+}
+
+.ayuda-envio {
+    margin-top: 10px;
+    color: #687287;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.mensaje-acta {
+    margin-bottom: 18px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: #dff7f4;
+    color: #146d66;
+    font-weight: 700;
+}
+
+.formulario-acta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.formulario-acta label {
+    display: grid;
+    gap: 8px;
+    font-weight: 700;
+}
+
+.formulario-acta input,
+.formulario-acta select,
+.formulario-acta textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8dfe9;
+    border-radius: 10px;
+    font: inherit;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+.boton-generar {
+    min-height: 48px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #287ed0;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.lista-observaciones-acta {
+    display: grid;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.lista-observaciones-acta article {
+    padding: 16px;
+    border: 1px solid #e2e7ef;
+    border-radius: 13px;
+    background: #f9fbff;
+}
+
+.lista-observaciones-acta p {
+    margin-top: 8px;
+    color: #465166;
+    line-height: 1.55;
+}
+
+@media (max-width: 700px) {
+    .formulario-acta {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-completo {
+        grid-column: auto;
+    }
+}

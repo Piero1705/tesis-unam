@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;background:#f2f5fb;color:#13213a;font-family:"Inter",sans-serif}
+.dashboard{min-height:100vh;display:grid;grid-template-columns:235px 1fr}
+.sidebar{padding:24px 18px;background:#fff;border-right:1px solid #dde4ef}
+.marca{display:flex;align-items:center;gap:10px;padding-bottom:24px;border-bottom:1px solid #edf0f5}
+.marca img{width:48px}.marca h1{color:#12345a;font-size:1.65rem}.marca p{color:#6f7785;font-size:.78rem}
+.menu{display:grid;gap:8px;margin-top:26px}
+.menu a{padding:14px 13px;border-radius:11px;color:#1d2f4d;font-size:.9rem;font-weight:700;text-decoration:none}
+.menu a:hover,.menu a.activo{background:#e4efff;color:#1764c0}
+.contenido{padding:30px}
+.encabezado{margin-bottom:24px}.encabezado h1{margin:4px 0 7px;font-size:2rem}.encabezado p{color:#667087}
+.subtitulo{color:#1780cf;font-size:.75rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.mensaje{margin-bottom:18px;padding:14px 16px;border-radius:12px;background:#dff7f4;color:#146d66;font-weight:700}
+.panel{margin-bottom:22px;padding:24px;border:1px solid #e0e6f0;border-radius:18px;background:#fff}
+.panel-titulo{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:20px}
+.panel-titulo h2{margin:5px 0}.panel-titulo p{color:#727b8c}
+.estado{display:inline-flex;padding:6px 10px;border-radius:999px;font-size:.76rem;font-weight:800}
+.estado.recibido{background:#d8f8f4;color:#14746d}.estado.pendiente{background:#fff1d2;color:#946115}
+.aviso,.estado-vacio{padding:22px;border-radius:13px;background:#f7f9fd;color:#6d7688;text-align:center}
+.asesor-asignado{display:flex;justify-content:space-between;gap:15px;margin-bottom:18px;padding:15px;border-radius:13px;background:#eef2ff}
+.asesor-asignado span{color:#667087}.asesor-asignado strong{overflow-wrap:anywhere}
+.archivo-actual,.archivo-tesis{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px;padding:16px;border:1px solid #e1e6ef;border-radius:13px;background:#f9fbff}
+.archivo-actual span,.archivo-actual small,.archivo-tesis small{display:block;color:#6d7688;margin-bottom:4px}
+.archivo-actual a,.archivo-tesis a{padding:10px 14px;border-radius:10px;background:#287ed0;color:#fff;font-weight:800;text-decoration:none}
+.formulario-subida,.formulario-observacion{display:grid;gap:12px}
+.formulario-subida input,textarea{width:100%;padding:12px;border:1px solid #d9e0ea;border-radius:10px;font:inherit}
+textarea{resize:vertical;min-height:150px}
+button{width:max-content;min-width:190px;padding:12px 17px;border:0;border-radius:10px;background:#287ed0;color:#fff;font-weight:800;cursor:pointer}
+button:hover{background:#1768b8}
+.observacion-panel{margin-top:22px}
+.comentario-asesor{padding:20px;border-left:5px solid #56c7cc;border-radius:12px;background:#f8fbff}
+.comentario-asesor p{line-height:1.65}
+.comentario-asesor footer{display:flex;justify-content:space-between;gap:15px;margin-top:18px;color:#657086;font-size:.85rem}
+@media(max-width:850px){.dashboard{grid-template-columns:1fr}.archivo-actual,.archivo-tesis,.asesor-asignado{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){.contenido{padding:18px}.panel-titulo{flex-direction:column}button{width:100%}}
+
+
+.mensaje.error {
+    background: #ffe4e4;
+    color: #9b2525;
+}
+
+.mensaje.exito {
+    background: #dff7f4;
+    color: #146d66;
+}
+
+.bloque-plagio {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #56c7cc;
+    border-radius: 16px;
+    background: #f5ffff;
+}
+
+.cabecera-plagio {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.cabecera-plagio h3 {
+    margin: 5px 0;
+}
+
+.cabecera-plagio p {
+    color: #667087;
+}
+
+.reporte-actual {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.reporte-actual strong,
+.reporte-actual small {
+    display: block;
+}
+
+.reporte-actual small {
+    margin-top: 5px;
+    color: #687287;
+}
+
+.reporte-actual a {
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #287ed0;
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.formulario-plagio {
+    display: grid;
+    gap: 11px;
+}
+
+.formulario-plagio input[type="file"] {
+    padding: 11px;
+    border: 1px solid #d9e0ea;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.formulario-observacion button:disabled {
+    background: #9da9ba;
+    cursor: not-allowed;
+}
+
+.aviso-obligatorio {
+    color: #9b5d16;
+    font-size: 0.86rem;
+    font-weight: 700;
+}
+
+.documentos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-documento-direccion {
+    min-height: 260px;
+    padding: 23px;
+    border: 1px solid #e0e6f0;
+    border-radius: 18px;
+    background: #ffffff;
+}
+
+.tarjeta-documento-direccion h2 {
+    margin: 16px 0 10px;
+}
+
+.tarjeta-documento-direccion p {
+    margin-bottom: 9px;
+    color: #59657a;
+    overflow-wrap: anywhere;
+}
+
+.tarjeta-documento-direccion small {
+    display: block;
+    margin-bottom: 20px;
+    color: #727b8c;
+}
+
+@media (max-width: 800px) {
+    .documentos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecera-plagio,
+    .reporte-actual {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

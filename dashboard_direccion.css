@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;background:#f2f5fb;color:#13213a;font-family:"Inter",sans-serif}
+.dashboard{min-height:100vh;display:grid;grid-template-columns:235px 1fr}
+.sidebar{padding:24px 18px;background:#fff;border-right:1px solid #dde4ef}
+.marca{display:flex;align-items:center;gap:10px;padding-bottom:24px;border-bottom:1px solid #edf0f5}
+.marca img{width:48px}.marca h1{color:#12345a;font-size:1.65rem}.marca p{color:#6f7785;font-size:.78rem}
+.menu{display:grid;gap:8px;margin-top:26px}
+.menu a{padding:14px 13px;border-radius:11px;color:#1d2f4d;font-size:.9rem;font-weight:700;text-decoration:none}
+.menu a:hover,.menu a.activo{background:#e4efff;color:#1764c0}
+.contenido{padding:30px}
+.encabezado{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:24px}
+.encabezado h1{margin:4px 0 7px;font-size:2rem}.encabezado p{color:#667087}
+.subtitulo{color:#1780cf;font-size:.75rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.perfil-director{width:55px;height:55px;border-radius:16px;background:#56c7cc;display:grid;place-items:center;font-weight:800}
+.mensaje{margin-bottom:18px;padding:14px 16px;border-radius:12px;font-weight:700}
+.mensaje.exito{background:#dff7f4;color:#146d66}.mensaje.error{background:#ffe4e4;color:#9b2525}
+.panel{padding:24px;border:1px solid #e0e6f0;border-radius:18px;background:#fff}
+.panel-titulo{margin-bottom:20px}.panel-titulo h2{margin-bottom:5px}.panel-titulo p{color:#727b8c}
+.tabla-contenedor{overflow-x:auto}
+table{width:100%;min-width:1050px;border-collapse:collapse}
+th,td{padding:15px 13px;border-bottom:1px solid #edf0f5;text-align:left;vertical-align:middle}
+th{color:#5d6d86;font-size:.76rem;text-transform:uppercase}
+.estado{display:inline-flex;padding:6px 10px;border-radius:999px;font-size:.76rem;font-weight:800}
+.estado.aprobado{background:#d8f8f4;color:#14746d}.estado.pendiente{background:#fff1d2;color:#946115}
+.asesor-correo,.fecha-tesis{display:block;margin-top:6px;color:#667087;overflow-wrap:anywhere}
+.boton-aprobar,.boton-secundario,.boton-confirmar{display:inline-flex;align-items:center;justify-content:center;padding:11px 15px;border-radius:10px;font-weight:800;text-decoration:none;border:none;cursor:pointer}
+.boton-aprobar,.boton-confirmar{background:#287ed0;color:#fff}.boton-secundario{border:1px solid #287ed0;background:#fff;color:#287ed0}
+.estado-vacio{padding:42px 15px;color:#747d8d;text-align:center}
+.datos-estudiante{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:22px}
+.datos-estudiante article{padding:22px;border-radius:18px;background:#aeb7ef}
+.datos-estudiante span{display:block;margin-bottom:8px;font-weight:700}.datos-estudiante strong{overflow-wrap:anywhere}
+.formulario-designacion{display:grid;gap:20px}
+.lista-asesores{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.tarjeta-asesor{display:grid;grid-template-columns:auto auto 1fr auto;align-items:center;gap:13px;padding:17px;border:2px solid #e0e6f0;border-radius:15px;background:#f9fbff;cursor:pointer}
+.tarjeta-asesor:has(input:checked){border-color:#287ed0;background:#edf5ff}
+.tarjeta-asesor input{width:18px;height:18px}
+.avatar-asesor{width:43px;height:43px;border-radius:13px;background:#aeb7ef;display:grid;place-items:center;font-weight:800}
+.informacion-asesor strong,.informacion-asesor small{display:block;overflow-wrap:anywhere}
+.informacion-asesor small{margin-top:5px;color:#687287}
+.seleccion{color:#287ed0;font-size:.78rem;font-weight:800}
+.contador-seleccion{color:#667087;font-weight:700}
+.boton-confirmar{width:max-content;min-width:240px}
+@media(max-width:900px){.dashboard{grid-template-columns:1fr}.datos-estudiante,.lista-asesores{grid-template-columns:1fr}}
+@media(max-width:580px){.contenido{padding:18px}.encabezado{align-items:flex-start}.perfil-director{display:none}.tarjeta-asesor{grid-template-columns:auto auto 1fr}.seleccion{grid-column:3}.boton-confirmar{width:100%}}
+
+
+.mensaje.error {
+    background: #ffe4e4;
+    color: #9b2525;
+}
+
+.mensaje.exito {
+    background: #dff7f4;
+    color: #146d66;
+}
+
+.bloque-plagio {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #56c7cc;
+    border-radius: 16px;
+    background: #f5ffff;
+}
+
+.cabecera-plagio {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.cabecera-plagio h3 {
+    margin: 5px 0;
+}
+
+.cabecera-plagio p {
+    color: #667087;
+}
+
+.reporte-actual {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.reporte-actual strong,
+.reporte-actual small {
+    display: block;
+}
+
+.reporte-actual small {
+    margin-top: 5px;
+    color: #687287;
+}
+
+.reporte-actual a {
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #287ed0;
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.formulario-plagio {
+    display: grid;
+    gap: 11px;
+}
+
+.formulario-plagio input[type="file"] {
+    padding: 11px;
+    border: 1px solid #d9e0ea;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.formulario-observacion button:disabled {
+    background: #9da9ba;
+    cursor: not-allowed;
+}
+
+.aviso-obligatorio {
+    color: #9b5d16;
+    font-size: 0.86rem;
+    font-weight: 700;
+}
+
+.documentos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-documento-direccion {
+    min-height: 260px;
+    padding: 23px;
+    border: 1px solid #e0e6f0;
+    border-radius: 18px;
+    background: #ffffff;
+}
+
+.tarjeta-documento-direccion h2 {
+    margin: 16px 0 10px;
+}
+
+.tarjeta-documento-direccion p {
+    margin-bottom: 9px;
+    color: #59657a;
+    overflow-wrap: anywhere;
+}
+
+.tarjeta-documento-direccion small {
+    display: block;
+    margin-bottom: 20px;
+    color: #727b8c;
+}
+
+@media (max-width: 800px) {
+    .documentos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecera-plagio,
+    .reporte-actual {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

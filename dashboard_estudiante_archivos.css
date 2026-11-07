@@ -1,0 +1,16 @@
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+body{background:#f3f6fb;color:#162033}
+.dashboard{min-height:100vh;display:grid;grid-template-columns:270px 1fr}
+.sidebar{background:#fff;border-right:1px solid #ddd;padding:24px 18px}
+.marca{display:flex;align-items:center;gap:12px;padding-bottom:25px;border-bottom:1px solid #eee}
+.marca img{width:55px}.marca h1{color:#123d7a}.marca p{font-size:13px;color:#777}
+.menu{display:flex;flex-direction:column;gap:10px;margin-top:25px}
+.menu a{text-decoration:none;color:#23324a;padding:15px;border-radius:10px;font-weight:bold}
+.menu a.activo,.menu a:hover{background:#eaf3ff;color:#0d5dcc}
+.contenido{padding:30px}.contenido h1{margin-bottom:25px}
+.panel{background:#fff;border-radius:15px;padding:25px;margin-bottom:20px;border:1px solid #e2e8f0}
+form{display:flex;gap:15px;align-items:center;flex-wrap:wrap}
+input[type=file]{padding:10px;border:1px solid #ccc;border-radius:8px}
+button{border:0;background:#1769e0;color:#fff;padding:12px 20px;border-radius:8px;font-weight:bold;cursor:pointer}
+.archivo{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid #eee}
+.archivo a{color:#1769e0;text-decoration:none}.mensaje{background:#eaf3ff;padding:14px;border-radius:10px;margin-bottom:20px}

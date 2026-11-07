@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;background:#f2f5fb;color:#13213a;font-family:"Inter",sans-serif}
+.dashboard{min-height:100vh;display:grid;grid-template-columns:235px 1fr}
+.sidebar{padding:24px 18px;background:#fff;border-right:1px solid #dde4ef}
+.marca{display:flex;align-items:center;gap:10px;padding-bottom:24px;border-bottom:1px solid #edf0f5}
+.marca img{width:48px}.marca h1{color:#12345a;font-size:1.65rem}.marca p{color:#6f7785;font-size:.78rem}
+.perfil{display:grid;gap:6px;margin-top:22px;padding:14px;border-radius:13px;background:#eef2ff}
+.perfil span{color:#667087;font-size:.78rem}.perfil strong{font-size:.86rem;overflow-wrap:anywhere}
+.menu{display:grid;gap:8px;margin-top:24px}.menu a{padding:14px 13px;border-radius:11px;color:#1d2f4d;font-size:.9rem;font-weight:700;text-decoration:none}
+.menu a:hover,.menu a.activo{background:#e4efff;color:#1764c0}
+.contenido{padding:30px}.encabezado{margin-bottom:24px}.encabezado h1{margin:4px 0 7px;font-size:2rem}.encabezado p{color:#667087;line-height:1.5}
+.subtitulo{color:#1780cf;font-size:.75rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.lista-tesis{display:grid;gap:18px}.tarjeta-tesis{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:24px;padding:23px;border:1px solid #e0e6f0;border-radius:18px;background:#fff}
+.datos-tesis h2{margin:12px 0 10px;font-size:1.08rem}.datos-tesis p{margin-top:5px;color:#59657a}.datos-tesis small{display:block;margin-top:10px;color:#747d8d}
+.resumen-observaciones{min-width:135px;padding:16px;border-radius:14px;background:#aeb7ef;text-align:center}.resumen-observaciones span{display:block;font-size:.78rem}.resumen-observaciones strong{display:block;margin-top:5px;font-size:1.7rem}
+.panel{padding:23px;border:1px solid #e0e6f0;border-radius:18px;background:#fff}.estado-vacio{color:#747d8d;text-align:center}
+.estado{display:inline-flex;padding:6px 10px;border-radius:999px;font-size:.76rem;font-weight:800}.estado.recibido{background:#d8f8f4;color:#14746d}.estado.pendiente{background:#fff1d2;color:#946115}
+.boton-principal{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 16px;border:none;border-radius:10px;background:#287ed0;color:#fff;font-weight:800;text-decoration:none;cursor:pointer}.boton-principal:hover{background:#1768b8}
+.revision-encabezado{display:flex;align-items:center;justify-content:space-between;gap:20px}.contador-general{min-width:130px;padding:15px;border-radius:14px;background:#aeb7ef;text-align:center}.contador-general span,.contador-general strong{display:block}.contador-general strong{margin-top:4px;font-size:1.6rem}
+.mensaje{margin-bottom:18px;padding:14px 16px;border-radius:12px;font-weight:700}.mensaje.exito{background:#dff7f4;color:#146d66}.mensaje.error{background:#ffe4e4;color:#9b2525}
+.documento-principal{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px}.documento-principal h2{margin:6px 0;font-size:1.08rem}.documento-principal small{color:#747d8d}
+.rejilla-revision{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px}.panel-titulo{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:18px}.panel-titulo h2{margin-top:5px;font-size:1.15rem}
+.formulario-observacion{display:grid;gap:12px}.formulario-observacion label{font-weight:700}.formulario-observacion textarea{width:100%;min-height:210px;padding:14px;border:1px solid #d8dfe9;border-radius:12px;font:inherit;resize:vertical}
+.lista-observaciones{display:grid;gap:13px}.tarjeta-observacion{padding:16px;border:1px solid #e3e8f0;border-radius:14px;background:#f9fbff}.cabecera-observacion{display:flex;justify-content:space-between;gap:12px;margin-bottom:11px}.cabecera-observacion small{display:block;margin-top:4px;color:#687287;overflow-wrap:anywhere}
+.tarjeta-observacion p{color:#3d4758;line-height:1.55}.fecha-observacion{display:block;margin-top:10px;color:#788194}.texto-pendiente{color:#8a6b35!important}
+@media(max-width:950px){.dashboard{grid-template-columns:1fr}.tarjeta-tesis,.rejilla-revision{grid-template-columns:1fr}}
+@media(max-width:580px){.contenido{padding:18px}.revision-encabezado,.documento-principal,.panel-titulo,.cabecera-observacion{align-items:flex-start;flex-direction:column}.boton-principal{width:100%}}
